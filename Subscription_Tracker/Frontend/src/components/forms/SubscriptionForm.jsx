@@ -110,19 +110,31 @@ export default function SubscriptionForm() {
         </div>
 
         <div>
-          <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1.5">
-            Next Renewal Date
-          </label>
-          <div class="relative">
-            <Calendar class="absolute left-3.5 top-2.5 h-4 w-4 text-slate-500 pointer-events-none" color='#64748B'/>
-            <input
-              type="date"
-              value={formData.nextRenewalDate}
-              onChange={(e) => setFormData({ ...formData, nextRenewalDate: e.target.value })}
-              class="w-full bg-slate-950/60 border border-slate-800 rounded-xl pl-10 pr-4 py-2.5 text-white focus:outline-hidden focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm cursor-pointer"
-            />
-          </div>
-        </div>
+  <label className="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1.5">
+    Next Renewal Date
+  </label>
+
+  <div className="relative">
+    <Calendar
+      className="absolute left-3.5 top-2.5 h-4 w-4 text-slate-500 pointer-events-none"
+      color="#64748B"
+    />
+
+    <input
+      type="date"
+      value={formData.nextRenewalDate}
+      onChange={(e) =>
+        setFormData({
+          ...formData,
+          nextRenewalDate: e.target.value,
+        })
+      }
+      className="w-full bg-slate-950/60 border border-slate-800 rounded-xl pl-10 pr-4 py-2.5 text-white focus:outline-hidden focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all text-sm cursor-pointer
+      [&::-webkit-calendar-picker-indicator]:invert
+      [&::-webkit-calendar-picker-indicator]:opacity-80"
+    />
+  </div>
+</div>
 
         <button
           type="submit"
