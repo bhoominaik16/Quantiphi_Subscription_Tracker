@@ -114,7 +114,7 @@ export default function SubscriptionForm() {
             Next Renewal Date
           </label>
           <div class="relative">
-            <Calendar class="absolute left-3.5 top-2.5 h-4 w-4 text-slate-500 pointer-events-none" />
+            <Calendar class="absolute left-3.5 top-2.5 h-4 w-4 text-slate-500 pointer-events-none" color='#64748B'/>
             <input
               type="date"
               value={formData.nextRenewalDate}
